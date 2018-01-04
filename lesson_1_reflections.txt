@@ -1,0 +1,30 @@
+Using diff command helps you identify lines that have changed from one version of the file to another. 
+In this way you can quickly search for possible bugs introduced since the last stable version.
+
+Having access to the entire history of a program will remind you the flow of ideas and
+the development steps undertaken from the beginning. You can go back and remove some of those changes
+if proven uneffective or if errors have been introduced. You can also decide to branch out new ideas.
+
+Manually choosing when to create commits in version control has pros and cons:
+pros) Grouping together changes that are logically connected helps remember them looking at the commit history;
+      Each commited version represent a logical step in the program development
+cons) Possibly forgetting to commit for a long time and ending up with commits that contains too many changes.
+
+Git takes a snapshot of the entire repository and consider changes that affect multiple files. 
+It make it easier to track logical changes that affect multiple files.
+
+git log 
+can be used to list all the commits with the message and the author and date.
+This helps you find specific commits by their ID umber
+git diff 
+helps you find the difference between commits, the lines added and removed
+git log --stat
+offer additional info about the commits, for instance the total number of lines added and subtracted.
+In this way you can identify the commits that involve large changes.
+
+Being able to recover older versions of the code makes me less nervous about changing the code.
+I can track back and find out when a particular bug was introduced. 
+For an effective use of git I need to have frequent enough commits, otherwise restoring older versions would 
+imply deep changes in the program.
+ 
+   
