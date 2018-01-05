@@ -7,22 +7,45 @@ no files is being tracked yet and no commit is submitted yet.
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
-The staging area containes the file and changes we have decided to track.
-It doesn't save a snapshot of such files until we commit it to the repository.
 The working directory is the location where the repository is stored locally. 
 The repository is a system of metadata that tracks the hystory of committed changes
 to the working directory.
+The working directory containes the current status of all the files.
+The files may have been modified with respect to the version saved
+in the last commit to the repository or in the staging area.
+The staging area containes the file and changes we have decided to track.
+It doesn't save a snapshot of such files until we commit it to the repository.
 
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+You can save the changes to the staging area but wait to commit if you are not sure 
+further changes will be needed to complete a logical block of work.
+This intermediate step is reversable and helps you feel confident in saving frequent
+snapshots of your work and reflects on the complition of a logical step. 
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+Branches are helpfuls when you want to explore a new idea that deviates from
+the initial development route. By branching out you can test the idea without 
+interfering with the master branch and keep two different version of the program.
+You may eventually merge the branch into the master branch if the idea you are exploring 
+is proven successful and can be integrated into the initial project, or keep it separate.
+
 How do the diagrams help you visualize the branch structure?
+With a graphical representation it becomes clear the structure of the branches and 
+committs and easy to operate on it.
+git log --graph --oneline
+is a very useful command to show the commits in a condesed list with branching graph
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
+By merging two branches the changes introduced in both are intergated (unless they conflict).
+From the merged version the commit hystory of both branches can be tracked based on the time
+the commit were made. The merged verion becomes the new tip of the branch we merge into.
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+The automatic merging highlights the differences betweeen merging programs and make it
+easier to identify and resolve possible conflicts.
